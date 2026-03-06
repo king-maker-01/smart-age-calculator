@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Smart Age Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/Calculator_Logo.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="main-header">
+  <!-- same header markup as index.html (omitted for brevity) -->
+  <div class="header-wrapper">
+    <div class="logo-section">
+      <img src="../assets/LOGO header.png" alt="Logo" class="logo-img">
+      <span class="logo-text">Smart Age Calculator</span>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Age Calculator</a></li>
+        <li><a href="calculators.html" class="nav-link">Calculators</a></li>
+        <li><a href="entrance.html" class="nav-link">Entrance Exam</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <a href="login.html" class="btn btn-outline">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<main class="auth-page">
+  <div class="auth-card">
+    <h2>Login</h2>
+    <form id="loginForm" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <div class="error" id="emailError"></div>
+
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" required>
+        <button type="button" class="show-pass" id="togglePass">👁️</button>
+      </div>
+      <div class="error" id="passwordError"></div>
+
+      <a href="#" class="forgot-link">Forgot password?</a>
+      <button type="submit" class="btn btn-primary full-width">Login</button>
+    </form>
+    <p class="small-text">Don't have an account? <a href="signup.html">Create account</a></p>
+  </div>
+</main>
+
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

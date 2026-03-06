@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entrance Exams - Smart Age Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/Calculator_Logo.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="header-wrapper">
+    <div class="logo-section">
+      <img src="../assets/LOGO header.png" alt="Logo" class="logo-img">
+      <span class="logo-text">Smart Age Calculator</span>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Age Calculator</a></li>
+        <li><a href="entrance.html" class="nav-link active">Entrance Exam</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <a href="login.html" class="btn btn-outline">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<main class="exams-container">
+  <div class="filters">
+    <div class="search-bar">
+      <input type="text" id="examSearch" placeholder="Search exams...">
+    </div>
+    <div class="filter-buttons">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="engineering">Engineering</button>
+      <button data-filter="medical">Medical</button>
+      <button data-filter="govt">Govt Jobs</button>
+      <button data-filter="defence">Defence</button>
+      <button data-filter="mba">MBA</button>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <!-- Engineering -->
+    <div class="exam-card" data-categories="engineering">
+      <div class="card-header">🎓 Engineering Entrance Exams</div>
+      <div class="accordion-content">
+        <div class="sublist">
+          <strong>National Level:</strong>
+          <ul>
+            <li><a href="https://jeemain.nta.nic.in/" target="_blank" class="official">JEE Main <span class="ext">↗</span></a></li>
+            <li><a href="https://jeeadv.ac.in/" target="_blank" class="official">JEE Advanced <span class="ext">↗</span></a></li>
+            <li>BITSAT</li>
+            <li>VITEEE</li>
+            <li>SRMJEEE</li>
+            <li>COMEDK UGET</li>
+          </ul>
+        </div>
+        <div class="sublist">
+          <strong>State Level:</strong>
+          <ul>
+            <li><a href="https://cetcell.mahacet.org/" target="_blank" class="official">MHT CET <span class="ext">↗</span></a></li>
+            <li>WBJEE</li>
+            <li>KCET</li>
+            <li>AP EAMCET</li>
+            <li>TS EAMCET</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical -->
+    <div class="exam-card" data-categories="medical">
+      <div class="card-header">🩺 Medical Entrance Exams</div>
+      <div class="accordion-content">
+        <div class="sublist">
+          <ul>
+            <li><a href="https://neet.nta.nic.in/" target="_blank" class="official">NEET-UG <span class="ext">↗</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Law -->
+    <div class="exam-card" data-categories="law">
+      <div class="card-header">⚖️ Law Entrance Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="https://consortiumofnlus.ac.in/" target="_blank" class="official">CLAT <span class="ext">↗</span></a></li>
+          <li>AILET</li>
+          <li>LSAT India</li>
+          <li>SLAT</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Management -->
+    <div class="exam-card" data-categories="mba">
+      <div class="card-header">💼 Management Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="https://iimcat.ac.in/" target="_blank" class="official">CAT <span class="ext">↗</span></a></li>
+          <li>XAT</li>
+          <li>MAT</li>
+          <li>CMAT</li>
+          <li>NMAT</li>
+          <li>SNAP</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pharmacy -->
+    <div class="exam-card" data-categories="pharmacy">
+      <div class="card-header">💊 Pharmacy Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li>GPAT</li>
+          <li>MHT CET (PCB)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Design & Architecture -->
+    <div class="exam-card" data-categories="design">
+      <div class="card-header">🏛️ Design & Architecture Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li>NATA</li>
+          <li>JEE Main Paper 2</li>
+          <li>NID DAT</li>
+          <li>UCEED</li>
+          <li>CEED</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Teaching -->
+    <div class="exam-card" data-categories="teaching">
+      <div class="card-header">📚 Teaching Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li>CTET</li>
+          <li>TET</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Defence -->
+    <div class="exam-card" data-categories="defence">
+      <div class="card-header">🪖 Defence Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="https://upsc.gov.in/" target="_blank" class="official">NDA <span class="ext">↗</span></a></li>
+          <li>CDS</li>
+          <li>AFCAT</li>
+          <li>INET</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Govt Jobs -->
+    <div class="exam-card" data-categories="govt">
+      <div class="card-header">🏛️ Government Job Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li>UPSC (IAS, IPS, IFS)</li>
+          <li><a href="https://ssc.nic.in/" target="_blank" class="official">SSC (CGL, CHSL, MTS) <span class="ext">↗</span></a></li>
+          <li><a href="https://www.ibps.in/" target="_blank" class="official">Banking (IBPS, SBI, RBI) <span class="ext">↗</span></a></li>
+          <li><a href="https://www.rrbcdg.gov.in/" target="_blank" class="official">Railways (RRB NTPC, Group D) <span class="ext">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Science & Research -->
+    <div class="exam-card" data-categories="science">
+      <div class="card-header">🔬 Science & Research Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li>INSPIRE</li>
+          <li>IISER Aptitude Test</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Other Exams -->
+    <div class="exam-card" data-categories="other">
+      <div class="card-header">📌 Other Exams</div>
+      <div class="accordion-content">
+        <ul>
+          <li>CUET</li>
+          <li>NCHM JEE</li>
+          <li>ICAR</li>
+          <li>NIFT</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="about.html">About Us</a>
+    <span>|</span>
+    <a href="sitemap.html">Sitemap</a>
+    <span>|</span>
+    <a href="terms.html">Terms of Use</a>
+    <span>|</span>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <div class="footer-copy">© 2026 Smart Age Calculator</div>
+</footer>
+
+<script src="../js/exams.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

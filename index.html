@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Page Title -->
+  <title>Age Calculator Online | Exam & Job Age Eligibility Checker by DOB</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Free online age calculator to calculate exact age in years, months and days. Check exam and government job age eligibility instantly using date of birth. Ideal for students, job seekers, and competitive exams.">
+
+  <!-- Meta Keywords -->
+  <meta name="keywords" content="age calculator, age calculator online, exact age calculator, calculate age by date of birth, dob age calculator, age calculator in years months days, exam age calculator, age eligibility checker, exam age eligibility, government job age calculator, job age eligibility calculator, UPSC age calculator, SSC age eligibility, bank exam age calculator, railway age eligibility, police bharti age calculator, defence exam age limit, MPSC age eligibility, age at specific date, calculate age on particular date, date of birth calculator, how old am i, what is my exact age, check exam eligibility by dob">
+
+  <!-- Mobile Friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Author -->
+  <meta name="author" content="Smart Age Calculator">
+
+  <!-- Search Engine -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/Calculator_Logo.jpg" type="image/jpeg">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<header class="main-header" id="siteHeader">
+  <div class="header-wrapper">
+    <!-- Logo Section -->
+    <div class="logo-section">
+      <a href="index.html" class="logo-link" aria-label="Smart Age Calculator home">
+        <img src="../assets/LOGO header.png" alt="Logo" class="logo-img">
+        <span class="logo-text">Smart Age Calculator</span>
+      </a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Age Calculator</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Calculators</a>
+          <div class="mega-menu" id="megaMenu">
+            <div class="mega-content">
+              <div class="column">
+                <a href="../Calculator/percentage-calculator.html" class="mega-item">Percentage Calculator</a>
+                <a href="../Calculator/date-calculator.html" class="mega-item">Date Calculator</a>
+                <a href="../Calculator/time-calculator.html" class="mega-item">Time Calculator</a>
+                <a href="../Calculator/hours-calculator.html" class="mega-item">Hours Calculator</a>
+              </div>
+              <div class="column">
+                <a href="../Calculator/gpa-calculator.html" class="mega-item">GPA Calculator</a>
+                <a href="../Calculator/grade-calculator.html" class="mega-item">Grade Calculator</a>
+                <a href="../Calculator/height-calculator.html" class="mega-item">Height Calculator</a>
+                <a href="../Calculator/concrete-calculator.html" class="mega-item">Concrete Calculator</a>
+              </div>
+              <div class="column">
+                <a href="../Calculator/ip-subnet-calculator.html" class="mega-item">IP Subnet Calculator</a>
+                <a href="../Calculator/data-size-converter.html" class="mega-item">Data Size Converter</a>
+                <a href="../Calculator/password-generator.html" class="mega-item">Password Generator</a>
+                <a href="../Calculator/dice-roller.html" class="mega-item">Dice Roller</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="entrance.html" class="nav-link">Entrance Exam</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Dark Mode Toggle -->
+      <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <!-- Login Button -->
+      <a href="login.html" class="btn btn-outline">Login</a>
+
+      <!-- Sign Up Button -->
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+
+      <!-- Hamburger Menu -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<div class="breadcrumb">home / other / age calculator</div>
+
+<div class="main">
+
+<div class="card">
+<h2>Online Age Calculator & Exam Eligibility Checker</h2>
+
+<label>Date of Birth</label>
+<input type="date" id="dob">
+
+<label>Age at Date</label>
+<input type="date" id="ageOn">
+
+<label>Select Exam / Job</label>
+<input list="examList" id="exam" placeholder="Type exam name...">
+<small class="hint">Start typing exam name to search quickly</small>
+
+<datalist id="examList">
+<option value="UPSC Civil Services">
+<option value="SSC CGL">
+<option value="SSC CHSL">
+<option value="SSC MTS">
+<option value="Bank PO">
+<option value="Bank Clerk">
+<option value="Railway Group D">
+<option value="Railway NTPC">
+<option value="Police Bharti">
+<option value="Defence (Army, Navy, Airforce)">
+<option value="JEE Main">
+<option value="JEE Advanced">
+<option value="MHT CET">
+<option value="GATE">
+<option value="MPSC">
+<option value="UPPSC">
+<option value="MPPSC">
+<option value="RPSC">
+<option value="TNPSC">
+<option value="Government Job">
+<option value="Private Job">
+<option value="Teaching Job">
+<option value="Clerk Job">
+<option value="IT Job">
+</datalist>
+
+<button onclick="calculateAge()">Calculate My Age</button>
+<div id="result">Enter dates to calculate age</div>
+</div>
+
+<div class="content">
+  <h3>About This Age Calculator</h3>
+
+  <p>
+    The Smart Age Calculator is a free online tool designed to calculate your exact age 
+    in years, months, and days using your date of birth. It also helps students and 
+    job seekers check eligibility for various exams and government jobs instantly.
+  </p>
+
+  <h4>✔ Features</h4>
+  <ul>
+    <li>Accurate age calculation</li>
+    <li>Check eligibility for exams</li>
+    <li>Supports multiple government exams</li>
+    <li>Instant result with detailed breakdown</li>
+  </ul>
+
+  <h4>✔ Useful For</h4>
+  <ul>
+    <li>Students preparing for exams</li>
+    <li>Government job aspirants</li>
+    <li>Form filling and verification</li>
+  </ul>
+
+  <h4>✔ Why Use This Tool?</h4>
+  <p>
+    Manual calculation can be confusing and error-prone. This tool provides 
+    fast and accurate results in one click.
+  </p>
+</div>
+
+</div>
+
+<footer class="site-footer saas-footer" role="contentinfo" aria-labelledby="footer-title">
+  <div class="footer-grid">
+    <!-- Brand / About -->
+    <div class="footer-brand">
+      <h3 id="footer-title">Smart Age Calculator</h3>
+      <p class="footer-desc">A free tool that helps students calculate their age accurately and check eligibility for government exams.</p>
+
+      <div class="footer-trust">
+        <div class="trust-pill">⭐ Trusted by 50,000+ students</div>
+        <div class="trust-pill">🎯 Used for 20+ government exams</div>
+      </div>
+
+      <div class="social" aria-label="social links">
+        <a href="#" aria-label="GitHub" title="GitHub">GH</a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="#" aria-label="Twitter" title="Twitter">tw</a>
+        <a href="mailto:help@smartagecalc.example" aria-label="Email" title="Email">@</a>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="../PAGES/calculators.html">Age Calculator</a></li>
+        <li><a href="../PAGES/entrance.html">Exam Eligibility</a></li>
+        <li><a href="../PAGES/entrance.html">Government Exams</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="../PAGES/contact.html">Help Center</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="../PAGES/privacy.html">Privacy Policy</a></li>
+        <li><a href="../PAGES/terms.html">Terms of Use</a></li>
+        <li><a href="../PAGES/sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="meta">© 2026 Smart Age Calculator • Built for students preparing for government exams</div>
+    <div class="links">
+      <a href="../PAGES/privacy.html">Privacy Policy</a>
+      <a href="../PAGES/terms.html">Terms of Use</a>
+      <a href="../PAGES/sitemap.html">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<!-- JS FILES -->
+<script src="../js/logic.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
